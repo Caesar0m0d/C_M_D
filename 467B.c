@@ -22,8 +22,8 @@ int bi(int m, int k, long long * mm){
 int l,l2,chk,cpr;
 int temp;
 long long xi;
-int b_xi[100];
-int b_std[100];
+int b_xi[200];
+int b_std[200];
 
 //transform dec to bi
 
@@ -51,14 +51,25 @@ b_xi[temp] = 0;
 		
 			     }
 		else {
-		for(temp=0;temp<100;temp++){
-if(b_std[temp] != b_xi[temp])chk++;
-if(chk > k)break;
+		for(temp=0;temp<200;temp++){
+printf("vs %d %d\n",b_std[temp],b_xi[temp]);
 if(b_std[temp] == 3 || b_xi[temp] == 3){
 cpr++;
-break;
+chk = 0;
 b_xi[temp] = 0;
+break;
+
+
 		           	 	      }	
+if(b_std[temp] != b_xi[temp]){
+chk++;
+}
+if(chk >= k){
+chk = 0;
+break;
+	     }
+b_xi[temp] = 0;
+
 						     }
 		      }
 
@@ -67,21 +78,7 @@ b_xi[temp] = 0;
 				    }
 
 //transform dec to bi
-printf("%d",cpr);
+printf("%d\n",cpr);
 return 0;
 	 }
 
-//compare friends
-/*
-		if(l2 != m){
-		for(temp=0;temp<1050000;temp++){
-if(b_std[temp] != b_xi[temp])chk++;
-if(chk > k)break;
-if(b_std[temp] == 3 || b_xi[temp] == 3){
-cpr++;
-break;
-		           	   }	
-					 }
-		     }
-//compare friends
-*/
