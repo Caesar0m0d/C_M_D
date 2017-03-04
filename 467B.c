@@ -1,23 +1,30 @@
 #include<stdio.h>
 #include<string.h>
 
-int bi(int m, int k);
+//int bi(int m, int k, int * mm);
 int main(){
 
 int n,m,k,l;
-
+long long xi;
+long long mm[1002];
 scanf("%d %d %d",&n,&m,&k);
 
-bi(m,k);
+		for(l=0;l<m+1;l++){
+scanf("%lld",&mm[l]);
+printf("%lld\n",mm[l]);
+					 }
+
+	//bi(m,k,mm);			
 
 return 0;
 	  }
-int bi(int m, int k){
+/*
+int bi(int m, int k, int * mm){
 int l=-1,l2,cpr=0,chk=0;
 long long xi;
 int b_xi[1050000];
 int b_std[1050000];
-long long mm[1002];
+
 		for(l2=0;l2<m+1;l2++){
 scanf("%lld",&xi);
 mm[l2] = xi;
@@ -57,4 +64,4 @@ break;
 
 return 0;
 	 }
-
+*/
