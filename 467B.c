@@ -22,8 +22,8 @@ int bi(int m, int k, long long * mm){
 int l,l2,chk,cpr;
 int temp;
 long long xi;
-int b_xi[200];
-int b_std[200];
+int b_xi[1050000];
+int b_std[1050000];
 
 //transform dec to bi
 
